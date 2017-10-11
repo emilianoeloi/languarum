@@ -4,43 +4,47 @@ import './App.css';
 
 import Form from './components/Form';
 
+const verbToBe = [
+  {
+    title: 'infinitive',
+    verbList: ['TO BE']
+  },
+  {
+    title: 'simple present',
+    verbList: ['AM', 'IS', 'ARE']
+  },
+  {
+    title: '-ing form',
+    verbList: ['BEING']
+  },
+  {
+    title: 'base form',
+    verbList: ['BE']
+  },
+  {
+    title: 'past form',
+    verbList: ['WAS', 'WERE']
+  },
+  {
+    title: 'past participle',
+    verbList: ['BEEN']
+  },
+];
+
 class App extends Component {
   render() {
     return (
       <div class="App">
         <div class="columns">
-          <Form
-            title={'infinitive'}
-            verbList={['TO BE']}
-            cssClass={'column'}
-          />
-          <Form
-            title={'simple present'}
-            verbList={['AM', 'IS', 'ARE']}
-            cssClass={'column'}
-          />
-          <Form
-            title={'-ing form'}
-            verbList={['BEING']}
-            cssClass={'column'}
-          />
-        </div>
-        <div class="App columns">
-          <Form
-            title={'base form'}
-            verbList={['BE']}
-            cssClass={'column'}
-          />
-          <Form
-            title={'past form'}
-            verbList={['WAS', 'WERE']}
-            cssClass={'column'}
-          />
-          <Form
-            title={'past participle'}
-            verbList={['BEEN']}
-            cssClass={'column'}
-          />
+          {verbToBe.map((verb) => {
+            return (
+              <Form
+              title={verb.title}
+              verbList={verb.verbList}
+              cssClass={'column'}
+            />
+            )
+          })}
         </div>
       </div>
     );
