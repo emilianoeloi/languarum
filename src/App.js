@@ -3,33 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 
 import Form from './components/Form';
-
-const verbToBe = [
-  {
-    title: 'infinitive',
-    verbList: ['TO BE']
-  },
-  {
-    title: 'simple present',
-    verbList: ['AM', 'IS', 'ARE']
-  },
-  {
-    title: '-ing form',
-    verbList: ['BEING']
-  },
-  {
-    title: 'base form',
-    verbList: ['BE']
-  },
-  {
-    title: 'past form',
-    verbList: ['WAS', 'WERE']
-  },
-  {
-    title: 'past participle',
-    verbList: ['BEEN']
-  },
-];
+import verbToBe from './verbToBe';
 
 class App extends Component {
   render() {
